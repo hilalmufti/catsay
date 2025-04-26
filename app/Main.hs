@@ -3,13 +3,6 @@ module Main where
 import System.Environment (getArgs)
 import CatSay (catSay)
 
-{-
-parseArgs ["-h"] = printUsage
-parseArgs [s] = catSay s
-parseArgs [] =
-
--}
-
 logo :: [String]
 logo =[
   "               _                       ",
@@ -27,7 +20,7 @@ usage :: [String]
 usage = [
   "usage: catsay [-h] msg",
   "",
-  "make the cat say a message",
+  "catsay is a configurable talking cat",
   "",
   "Options:",
   "  -h, --help  Show this help message and exit",
