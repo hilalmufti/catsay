@@ -70,7 +70,7 @@ catsay can be used as a standard Haskell library via the `catSay` function.
 module CatSay (catSay) where
 
 main :: IO ()
-main = catsay "hello from library"
+main = catSay "hello from library"
 ```
 
 ```
