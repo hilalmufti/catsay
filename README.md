@@ -23,36 +23,6 @@ catsay is a configurable talking cat, similar to
 [cowsay](https://github.com/piuccio/cowsay/tree/master) and
 [haskell-say](https://github.com/periodic/haskell-say#readme).
 
-## Install
-
-To install, you need Haskell/Cabal. 
-
-### Step 1. Install Haskell/Cabal (skip this if they're already installed)
-
-We use [GHCup](https://www.haskell.org/ghcup/) to install Haskell:
-
-#### For Linux, macOS, FreeBSD or WSL2, run this in a terminal:
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-```
-
-#### For Windows, run this in a PowerShell session:
-``` bash
-Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { & ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -Interactive -DisableCurl } catch { Write-Error $_ }
-```
-
-### Step 2. Clone and install
-```
-git clone https://github.com/hilalmufti/catsay.git
-cd catsay
-cabal install
-```
-
-### Verify installation
-```
-catsay -h
-```
-
 ## Usage
 ```
 catsay "hello meow"
@@ -63,7 +33,7 @@ catsay "miao miao miao"
 ```
 For more information, run `catsay -h`.
 
-## Usage as al library 
+## Usage as a library 
 catsay can be used as a standard Haskell library via the `catSay` function.
 
 ``` haskell
@@ -92,3 +62,33 @@ main = catSay "hello from library"
 ＼二)
 ```
 
+
+## Install
+
+To install, you need Haskell/Cabal. 
+
+### Step 1. Install Haskell/Cabal (skip this if they're already installed)
+
+We use [GHCup](https://www.haskell.org/ghcup/) to install Haskell:
+
+For Linux, macOS, FreeBSD or WSL2, run this in a terminal:
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+```
+
+For Windows, run this in a PowerShell session:
+``` bash
+Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; try { & ([ScriptBlock]::Create((Invoke-WebRequest https://www.haskell.org/ghcup/sh/bootstrap-haskell.ps1 -UseBasicParsing))) -Interactive -DisableCurl } catch { Write-Error $_ }
+```
+
+### Step 2. Clone and install
+```
+git clone https://github.com/hilalmufti/catsay.git
+cd catsay
+cabal install
+```
+
+### Step 3. Verify installation
+```
+catsay -h
+```
