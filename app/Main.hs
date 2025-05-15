@@ -29,9 +29,9 @@ usage = [
   "  msg         Message for the cat to say. Should be a string surrounded by \"",
   "",
   "Examples:",
-  "  catsay \"miao miao miao\"      -- make the cat say \"miao miao miao\"",
-  "  catsay \"hi claire\"           -- make the cat say \"hi claire\"",
-  "  catsay -h                    -- show this help and exit",
+  "  catsay miao miao miao      -- make the cat say \"miao miao miao\"",
+  "  catsay hi claire           -- make the cat say \"hi claire\"",
+  "  catsay -h                  -- show this help and exit",
   ""
   ] ++ logo
 
