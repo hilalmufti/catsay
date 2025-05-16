@@ -1,5 +1,6 @@
 module Main where
 
+import System.IO
 import System.Environment (getArgs)
 import CatSay (catSay)
 
@@ -26,21 +27,26 @@ usage = [
   "  -h, --help  Show this help message and exit",
   "",
   "Arguments:",
-  "  msg         Message for the cat to say. Should be a string surrounded by \"",
+  "  msg         Message for the cat to say.",
   "",
   "Examples:",
-  "  catsay miao miao miao      -- make the cat say \"miao miao miao\"",
-  "  catsay hi claire           -- make the cat say \"hi claire\"",
-  "  catsay -h                  -- show this help and exit",
+  "  catsay miao miao miao            -- make the cat say \"miao miao miao\"",
+  "  catsay hi claire                 -- make the cat say \"hi claire\"",
+  "  catsay -h                        -- show this help and exit",
+  "  echo \"miao miao miao\" | catsay   -- make the cat say \"miao miao miao via pipes\"",
   ""
   ] ++ logo
-
 
 main :: IO ()
 main = do
   args <- getArgs
   case args of
-    ["-h"] -> mapM_ putStrLn usage
+    []         -> displayMsg
+    ["-h"]     -> mapM_ putStrLn usage
     ["--help"] -> mapM_ putStrLn usage
-    [s] -> catSay s
-    _ -> mapM_ putStrLn usage
+    _          -> catSay (unwords args)
+  where
+    displayMsg :: IO ()
+    displayMsg = do
+      input <- getContents'
+      catSay input
