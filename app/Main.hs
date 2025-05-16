@@ -33,7 +33,7 @@ usage = [
   "  catsay miao miao miao            -- make the cat say \"miao miao miao\"",
   "  catsay hi claire                 -- make the cat say \"hi claire\"",
   "  catsay -h                        -- show this help and exit",
-  "  echo \"miao miao miao\" | catsay   -- make the cat say \"miao miao miao via pipes\"",
+  "  echo \"miao miao miao\" | catsay   -- make the cat say \"miao miao miao\" via pipe",
   ""
   ] ++ logo
 
