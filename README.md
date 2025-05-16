@@ -25,11 +25,11 @@ catsay is a configurable talking cat, similar to
 
 ## Usage
 ```
-catsay "hello meow"
+catsay hello meow
 ```
 or
 ```
-catsay "miao miao miao"
+echo "miao miao miao" | catsay
 ```
 For more information, run `catsay -h`.
 
@@ -85,6 +85,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force;[System.Net.ServicePointManager
 ```
 git clone https://github.com/hilalmufti/catsay.git
 cd catsay
+cabal update
+cabal build
 cabal install
 ```
 
